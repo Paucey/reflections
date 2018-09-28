@@ -16,3 +16,61 @@ going to be adding and if you need to make changes you still can before, pun int
 is made and to adjust it - but, perhaps that is only done at time of commit. Basically
 I see it as a chance to ensure you're satisfied with how your commit will look before
 creating it.
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+That's a good question. Thinking about it, it allows me to compare the current changes
+to the latest commit and therefore I can see if the changes I have made amount to one
+logical change overall. Then I can commit that change and add a commit message that
+reflects the changes that I made. What were those commands again? I mean, obviously
+'git diff', 'git status', but there were some operators... like '--staged' wasn't there?
+That lesson went by pretty quickly, I might need to go back and brush up on it.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Like she mentioned in the video, if I was working on an experimental aspect of the program
+that was more or less separate from my main work, I might want to create a branch that
+keeps the rest of the code untouched and ready for changes. That being said, what if my
+experimental code ends up with outdated code that was removed in subsequent master branch
+commits? I'm not sure, I think I'll find out in later lessons! Anyhow, it also helps in
+making variants, as she did in this last lesson with the creation of an "easy mode" for
+the asteroids game. And of course, before I forget, being able to NAME the branches
+helps incredibly in keeping your history and work organized.
+
+How do the diagrams help you visualize the branch structure?
+
+As commits and branches are very linear in structure, and have parents, then they are very
+easy to visualize and drawing diagrams helps keep it all in order. In addition, it helps
+to know that Git warns you when you're in a detached head state as you do run a real risk
+of losing all of your changes if you revert back to the master or another branch that can't
+"reach" or doesn't haave "reachability" with your current changes (which is what the detached
+head state is).
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+You combine the differences between the two using the context of their shared parent. Therefore,
+theoretically, you end up with a merging of the two files that should retain the unique func-
+tionality of each. I could forsee this being difficult if the two branches conflicted somehow,
+but we'll see how that's addressed in later lessons if at all. They are represented the way they are in
+the diagrams because they have two separate paths of history: one for each branch that was merged,
+that is, the new "master" has two parents instead of one. Also, I just want to point out that I'm
+glad they finally introduced the "git show" command to show the changes made between a commit and
+its parent, and I understand why they kept that in their pocket as long as they did. I wouldn't
+appreciate fully what the command was doing or why it was necessary until this step when parentage
+gets all fuzzy during merging (as all of the commits are listed in the history by their timestamp
+rather than in their respective branches).
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Automatic merging works well if two changes are unrelated to each other. However, it seems as 
+if Git will only detect changes that are made in the same sections of the code - that is, the same
+physical section. Which makes sense, I suppose, as it's comparing your two branches to an original
+ancestor. Would that mean that it makes more sense to add to the bottom of code than to the top of it?
+That being said, in the example that we just looked at, Git noticed a conflict in one part of code,
+but didn't notice that the same chunk of code had been removed and placed directly above it. Perhaps
+that's because that section was completely replaced with one line - that is, a chunk was removed
+but there was still someone *different* occupying that space, even if it was just a change of one
+line. It probably correctly intuited that everything below had remained the same - that is, it
+could detect where there is consistency and where there is not. The benefit over doing merges manually
+is that Git highlights the differences for you and allows most other changes to stand. You don't
+have to do the legwork of deciding if there are conflicts as Git detects them for you.
