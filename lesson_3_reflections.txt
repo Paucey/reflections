@@ -31,3 +31,11 @@ on your forked version of the repository.
 Branches are good for modifying your repository, however unlike cloning or forking, they exist
 within the repository and allow one to have multiple versions of the same files being worked
 on at once.
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+As mentioned in one of the videos, this allows you to work on your own copy offline while also
+being able to reference the most up-to-date copy of the remote repository that you had access to.
+It also acts as the "3rd node" in merging - that is, it's the reference point from which your
+changes and any potential changes by others on GitHub will be compared to to determine if there
+are any conflicts that need addressing.
