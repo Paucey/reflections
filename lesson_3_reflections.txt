@@ -6,3 +6,28 @@ something I'm only making for myself and on a single system likely won't need a
 remote repository. Also, having a remote repository allows me to keep a safe backup
 in case something were to happen to my local version (though the two aren't
 automatically kept up to date with each other).
+
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+That's a good question... I mean, theoretically it won't always be the same branch that
+you and someone else is working on, so theoretically if only one of you is working
+on any given branch you would probably want changes to stay the same no matter
+where you're working on your project, especially if you can control who has access to what.
+That being said, perhaps changes were made by someone else (or even yourself) that you
+don't want to bring over to your local copy. In a way, GitHub has its own "commit" of your
+project, it's almost like a branch in itself, and perhaps those changes aren't ones
+that you want to have on your local version. I wonder if you can pull a repository and 
+add it as a new branch to your local repository?
+
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+Clones allow you to completely clone a repository. The downside to this is that if its someone
+else's work from GitHub, their history with the project won't be retained. Clones can be used
+locally, as well, but we haven't got into that yet in the lesson.
+
+Forks allow you to retain the original creator's history plus allow others to easily collaborate
+on your forked version of the repository.
+
+Branches are good for modifying your repository, however unlike cloning or forking, they exist
+within the repository and allow one to have multiple versions of the same files being worked
+on at once.
