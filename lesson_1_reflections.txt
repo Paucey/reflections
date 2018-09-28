@@ -1,0 +1,68 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+Comparing two complete files by hand was extremely tedious. I found myself second-guessing over 
+and over again whether or not there were differences that I'd missed. Using "FC" (as I am on
+Windows) simplified things immensely. I'm surprised I had never encountered the program before
+in the past and am happy to add it to my toolbox. This has been a very encouraging start to my
+learning process as I already considered myself, at least, as an advanced beginner but now
+humbly admit there is a lot I don't know about even basic things like spotting differences
+between two versions of files.
+
+FC displays differences by isolating sections of the two files and then stacking the versions
+one atop the other so that you can easily compare the changes that had been made. I'm not 100% sure
+how it decides where to end the sections being compared, except perhaps that it displays a maximum of
+three-line sections. That is as much as I can determine from the output from the first exercise. It
+doesn't appear as if commas, brackets, or semi-colons provide breaks to its output. I suppose that
+makes sense as breaks that like could interrupt important changes being compared.
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+Hmmm how can it make me be a more efficient programmer in the long term... I would have an exact record
+of every change I made for everything I worked on. I would be able to see how and when I made changes
+and be able to track trends in how I work. I could identify mistakes that I'd made when making
+changes and be able to avoid those mistakes in the future. It would also allow me to pinpoint mistakes
+between revisions and not waste time trying to figure out where I made errors.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+I think that it's good to be able to control when you save your commits, as is noted in the videos that
+you can save at points that you are attempting to compile. Also, you can save after logical changes
+and keep notes on what those changes were to help organize your version history better.
+
+However, if you were to forget / neglect to save over a period of time, saving periodically would at
+least allow you to keep some version history. However, as noted in the videos, there would be no
+logical order to them except for the times they were saved; you wouldn't know where you were in your
+edits / what changes were made between versions without going in and comparing the different versions
+as there wouldn't be commit notes. And even if you were prompted to add commit notes at the time of
+saving, it would be obtrusive and interruptive of your coding.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+As files are inter-related in coding, allowing multiple files to be saved as a "snapshot" of changes makes sense.
+Having just one of three or so inter-related files saved, while the other two could be drastically incompatible,
+makes little sense. Google Docs, on the other hand, treats files independently because its system isn't
+built on facilitating coding which more often requires multiple files sharing a version history.
+
+How can you use the commands git log and git diff to view the history of files?
+
+I can use "git log" to list out all of the commit notes for each version history of my files, and I can use
+"git diff" to show what the actual differences are between two versions. With the proper UI settings, added
+lines will be green (and marked with a '+') while lines deleted will be red (and marked with a '-'). Also,
+to quit out of the log at any time I can press "q" to return to the command prompt.
+
+How might using version control make you more confident to make changes that could break something?
+
+Having a complete history of all of the changes that I made, and being able to compare them, would make it
+so much easier to commit to changes that could potentially break my program. If I altered something that
+made my program unusable it's no sweat as I can just go back to a previous version that I know worked.
+Better than that, I can compare the two versions to see the changes I had made to make it easier for me
+to track down where mistakes may have been made.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+Geez, that's a good question. So far I don't think I know how to setup most of its core functionality.
+For instance, did I miss how to create commits, etc? How is that done through git? Oh well, maybe it
+will come up. But for the most part I want to use Git for this course. I'm a little uneasy with some
+of the shortcuts that Git uses. Like why is Shift Insert the paste command? It's aggravating. Hopefully
+I can change that. Honestly I think it would be easier to just use the Command Prompt, which I'm
+more comfortable with. We'll see how it goes down the road!
